@@ -3,7 +3,7 @@
 # 
 # THEN BUILD / RUN -it into this and experiment around
 #
-FROM google/python-hello
+FROM python:2.7.16-alpine
 
 RUN pip install selenium
 

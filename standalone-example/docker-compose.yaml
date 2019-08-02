@@ -14,9 +14,6 @@ services:
     build: 
       context: test-scripts/.
       dockerfile: Dockerfile
+    # ports (HOST:CONTAINER)
     ports:
-      - "8080:8080"
-    # environment:
-    #   - SELENIUM_SERVICE_NAME=selenium-standalone-chrome
-    # ports: 
-    #   - "4000"
+      - "8081:8080"
