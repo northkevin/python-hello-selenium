@@ -1,0 +1,22 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
+version: "3"
+services:
+  selenium-standalone:
+    image: selenium/standalone-chrome:3.141.59-titanium
+    container_name: selenium-standalone-chrome
+    ports:
+      - "4444:4444"
+    volumes:
+      - /dev/shm:/dev/shm
+
+  test-scripts:
+    build: 
+      context: test-scripts/.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    # environment:
+    #   - SELENIUM_SERVICE_NAME=selenium-standalone-chrome
+    # ports: 
+    #   - "4000"

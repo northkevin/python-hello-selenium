@@ -1,0 +1,1 @@
+Run `sh run_me.sh` to test running chrome standalone selenium with a simple python script
